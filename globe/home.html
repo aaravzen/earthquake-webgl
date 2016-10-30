@@ -123,10 +123,10 @@
     <span>Built using Google Chrome's WebGL Globe</span>
   </a>
 
-  <script type="text/javascript" src="third-party/Detector.js"></script>
-  <script type="text/javascript" src="third-party/three.min.js"></script>
-  <script type="text/javascript" src="third-party/Tween.js"></script>
-  <script type="text/javascript" src="globe.js"></script>
+  <script type="text/javascript" src="globe/third-party/Detector.js"></script>
+  <script type="text/javascript" src="globe/third-party/three.min.js"></script>
+  <script type="text/javascript" src="globe/third-party/Tween.js"></script>
+  <script type="text/javascript" src="globe/globe.js"></script>
   <script type="text/javascript">
 
     if(!Detector.webgl){
@@ -165,7 +165,7 @@
       
       
       xhr = new XMLHttpRequest();
-      xhr.open('GET', 'population909500.json', true);
+      xhr.open('GET', 'globe/data.json', true);
       xhr.onreadystatechange = function(e) {
         if (xhr.readyState === 4) {
           if (xhr.status === 200) {
