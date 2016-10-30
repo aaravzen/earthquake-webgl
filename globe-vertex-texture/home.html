@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en">
   <head>
-    <title>WebGL Globe</title>
+    <title>Earthquake Visualization</title>
     <meta charset="utf-8">
     <style type="text/css">
       html {
@@ -67,7 +67,7 @@
       }
 
       .year {
-        font: 16px Georgia;
+        font: 12px Georgia;
         line-height: 26px;
         height: 30px;
         text-align: center;
@@ -80,7 +80,7 @@
       }
 
       .year:hover, .year.active {
-        font-size: 23px;
+        font-size: 16px;
         color: #fff;
       }
 
@@ -106,21 +106,21 @@
   <div id="container"></div>
 
   <div id="info">
-    <strong><a href="http://www.chromeexperiments.com/globe">WebGL Globe</a></strong> <span class="bull">&bull;</span> Created by the Google Data Arts Team <span class="bull">&bull;</span> Data acquired from <a href="http://sedac.ciesin.columbia.edu/gpw/">SEDAC</a>
+    <strong><a href="http://www.chromeexperiments.com/globe">WebGL Globe</a></strong> <span class="bull">&bull;</span> Data acquired from <a href="http://www.ngdc.noaa.gov/docucomp/page?xml=NOAA/NESDIS/NGDC/MGG/Hazards/iso/xml/G012153.xml&view=getDataView&header=none">National Centers for Environmental Information</a>
   </div>
 
   <div id="currentInfo">
-    <span id="year1990" class="year">1990</span>
-    <span id="year1995" class="year">1995</span>
-    <span id="year2000" class="year">2000</span>
+    <span id="year1990" class="year">2005-2009</span>
+    <span id="year1995" class="year">2010-2014</span>
+    <span id="year2000" class="year">2015-2016</span>
   </div>
 
   <div id="title">
-    World Population
+    Earthquake Magnitudes
   </div>
 
   <a id="ce" href="http://www.chromeexperiments.com/globe">
-    <span>This is a Chrome Experiment</span>
+    <span>Built using Google Chrome's WebGL Globe</span>
   </a>
 
   <script type="text/javascript" src="third-party/Three/ThreeWebGL.js"></script>
@@ -136,7 +136,7 @@
       Detector.addGetWebGLMessage();
     } else {
 
-      var years = ['1990','1995','2000'];
+      var years = ['2005-2009','2010-2010-2014','2015-2016'];
       var container = document.getElementById('container');
       var globe = new DAT.Globe(container);
       console.log(globe);
